@@ -30,7 +30,7 @@ ul li a {
   padding: 5px 20px;
   display: inline-flex;
   font-weight: 700;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 ul:hover li a {
   color: #0002;
@@ -39,12 +39,18 @@ ul li:hover a {
   color: #000;
   background: transparent;
 }
+
+#litesrt:hover ~ #butt {
+    color: #b00c0c;
+    background: blue;
+
+  }
 ul li a:before {
   content: "";
   position: absolute;
   top: 50%;
-  left: 40%;
-  transform: translate(-50%, -50%);
+  left: 50%;
+  transform: translate(-30%, -43%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,22 +71,48 @@ ul li a:hover:before {
   letter-spacing: 10px;
   width: 1800px;
   height: 1800px;
+  
 }
 ul li:nth-child(6n + 1) a:before {
-  background: #0470fe;
+   /*background: #0470fe; */
 }
 ul li:nth-child(6n + 2) a:before {
-  background: #ff7675;
+  /* background: #ff7675; */
 }
 ul li:nth-child(6n + 3) a:before {
-  background: #1582fe;
+  /* background: #1582fe; */
 }
 ul li:nth-child(6n + 4) a:before {
-  background: #a29bfe;
+  /* background: #a29bfe; */
 }
 ul li:nth-child(6n + 5) a:before {
-  background: #fd79a8;
+  /* background: #fd79a8; */
 }
 ul li:nth-child(6n + 6) a:before {
-  background: #ffeaa7;
+  /* background: #ffeaa7; */
 }
+
+#nav {
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: flex;
+  justify-content: left;
+  
+}
+
+@keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in 1 forwards;
+  }
+  
+  .is-paused {
+    animation-play-state: paused;
+  }
