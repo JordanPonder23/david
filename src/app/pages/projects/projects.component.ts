@@ -5,8 +5,8 @@ import { PreviewService } from '../../services/preview-service.service';
 @Component({
   selector: 'projects-page',
   imports: [RouterOutlet],
-  templateUrl: './project.component.html',
-  styleUrl: './project.component.css'
+  templateUrl: './projects.component.html',
+  styleUrl: './projects.component.css'
 })
 export class ProjectPageComponent {
   title = 'david-app';

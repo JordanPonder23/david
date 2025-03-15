@@ -1,4 +1,5 @@
-<div id="prevTest">
+<div id="prevTest" [ngSwitch]='selector'>
+   <div *ngSwitchCase="'home'"> <home-page></home-page> </div>
 
-   {{selector}} 
+   <div *ngSwitchCase="'projects'"> <projects-page></projects-page> </div>
 </div>

@@ -4,6 +4,7 @@ import { WheelComponent } from './wheel-menu/wheel.component';
 import {NavComponent} from './nav-bar/nav.component';
 import {FooterComponent} from './footer/footer.component';
 import {PosterComponent} from './poster/poster.component';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, NavComponent,FooterComponent, PosterComponent],

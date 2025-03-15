@@ -59,7 +59,7 @@ export class NavComponent implements AfterViewInit {
             prev.classList.remove("fade-in")
             prev.style.opacity = '0';
         });
-
+        /*
         const extrasLi = document.getElementById("extrasLI") as HTMLAnchorElement;
 
         extrasLi.addEventListener('mouseover', () => {
@@ -69,9 +69,11 @@ export class NavComponent implements AfterViewInit {
 
         });
         extrasLi.addEventListener('mouseout', () => {
+            console.log("extras mouse out ")
             prev.classList.remove("fade-in")
             prev.style.opacity = '0';
         });
+        */
 
         const contactsLi = document.getElementById("contactLI") as HTMLAnchorElement;
 

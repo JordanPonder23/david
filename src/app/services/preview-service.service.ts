@@ -1,13 +1,8 @@
 import {
-  ComponentFactoryResolver,
-  Injectable,
-  Inject
+  Injectable
+
 } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-
-import { HomePageComponent } from '../pages/home/home.component';
-import { ProjectPageComponent } from '../pages/projects/projects.component';
-
 
 @Injectable({
   providedIn: 'root'

@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { PreviewService } from '../services/preview-service.service';
 import { HomePageComponent } from '../pages/home/home.component';
 import { ProjectPageComponent } from '../pages/projects/projects.component';
+import { NgSwitch, NgSwitchCase } from '@angular/common';
 
 @Component({
   selector: 'preview-holder',
-  imports: [RouterOutlet, HomePageComponent, ProjectPageComponent],
+  imports: [RouterOutlet, HomePageComponent, ProjectPageComponent, NgSwitch, NgSwitchCase],
   templateUrl: './preview.component.html',
   styleUrl: './preview.component.css'
 })
@@ -15,13 +16,7 @@ export class PreviewHolderComponent {
   previewService: PreviewService = inject(PreviewService);
   selector = "test"
 
-  @ViewChild('editor') editor!: ElementRef <HTMLElement> ; //not used
-
-    private compRef!: ComponentRef<ProjectPageComponent>; //not used
-    private viewContainerRef:ViewContainerRef // not used
-
   constructor(private _ViewContainerRef: ViewContainerRef) {
-    this.viewContainerRef = _ViewContainerRef; // not used
     this.grabPreviewState();
   }
 
@@ -32,7 +27,7 @@ export class PreviewHolderComponent {
     this.previewService.getMessage().subscribe({
         next: (msg) => {
             console.log(msg)
-            this.selector = "<"+msg+"-page"+">" + "</"+msg+"-page"+">";
+            this.selector = msg;
         },
         error: (error) => {
             console.error('Error fetching user:', error);

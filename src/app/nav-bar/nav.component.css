@@ -59,10 +59,11 @@ ul li a:before {
   border-radius: 50%;
   z-index: -1;
   opacity: 0;
-  font-weight: 900;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 500px;
   transition: letter-spacing 0.5s, left 0.5s;
+  pointer-events: none;
 }
 ul li a:hover:before {
   content: attr(data-text);
