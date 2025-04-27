@@ -1,12 +1,13 @@
 import { AfterViewInit, Component, inject, AfterContentInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { PreviewHolderComponent } from '../preview-holder/preview.component';
+import { NavSearchComponent } from '../nav-search/nav-search.component'
 import { PreviewService } from '../services/preview-service.service';
-
+import { PreviewdirectiveDirective } from '../previewdirective.directive'; 
 
 @Component({
     selector: 'nav-bar',
-    imports: [RouterOutlet, PreviewHolderComponent],
+    imports: [RouterOutlet, PreviewHolderComponent,NavSearchComponent, PreviewdirectiveDirective],
     templateUrl: './nav.component.html',
     styleUrl: './nav.component.css'
 })
@@ -135,7 +136,7 @@ export class NavComponent implements AfterViewInit {
     }
 
     ngAfterViewInit(): void {
-
+        /*
         async function onReady() {
             if (document.readyState !== 'loading') {
                 return;
@@ -150,6 +151,9 @@ export class NavComponent implements AfterViewInit {
             this.setupListeners()
             
         })();
+        */
+
+        
     }
 
     private grabPreviewState(): string {

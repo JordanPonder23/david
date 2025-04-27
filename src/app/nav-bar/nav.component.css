@@ -99,9 +99,17 @@ ul li:nth-child(6n + 6) a:before {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    display: flex;
-  justify-content: left;
+    display: block;
+  align-items: center;
+  justify-content: center;
   
+}
+
+#globalSearch {
+  font-size: larger;
+  padding-bottom: 20px;
+  align-self:flex-end;
+  display: block;
 }
 
 @keyframes fadeIn {
